@@ -1,0 +1,162 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: radial-gradient(circle at top left, #001f3f, #001427);
+  color: #f8f9fa;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding: 2rem;
+}
+
+/* Root */
+#root {
+  width: 100%;
+  max-width: 1100px;
+  overflow: hidden; /* Dodato da bi sprečili da sadržaj izlazi van ekrana */
+}
+
+/* Kontejner za kviz */
+.container {
+  background-color: #0a192f;
+  border: 2px solid #007bff;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 123, 255, 0.3);
+  margin-bottom: 2rem;
+  width: 100%; /* Dodato da bi se prilagodilo širini ekrana */
+  max-width: 100%; /* Sprečava prelazak van ekrana na manjim uređajima */
+}
+
+/* Naslovi */
+h1 {
+  font-size: 2.5rem; /* Manja veličina h1 naslova */
+  text-align: center;
+  color: #00d9ff;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+  word-wrap: break-word; /* Dodato da bi se sprečio prelazak teksta van okvira */
+  overflow-wrap: break-word; /* Dodato da bi se sprečio prelazak teksta van okvira */
+}
+
+h2, h3 {
+  text-align: center;
+  color: #00d9ff;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+
+/* Pitanja */
+h4 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #f1f1f1;
+}
+
+/* Dugmad */
+button {
+  display: inline-block;
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin: 0.5rem;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+button:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Rezultat */
+.alert-success {
+  background-color: #28a745;
+  color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* Status pitanja */
+.question-status {
+  margin-top: 1.5rem;
+  color: #adb5bd;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  button {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  h1 {
+    font-size: 1.75rem; /* Manja veličina naslova na manjim ekranima */
+    word-wrap: break-word; /* Sprečava prelazak teksta na mobilnim uređajima */
+  }
+}
+
+.quiz-container {
+  background-color: #1f2235;
+  color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 700px;
+  margin: 2rem auto;
+  box-shadow: 0 0 20px rgba(0, 123, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.quiz-question {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.quiz-option {
+  background-color: transparent;
+  border: 2px solid #007bff;
+  color: #fff;
+  transition: none;
+}
+
+.quiz-option:hover {
+  background-color: transparent;
+}
+
+.quiz-option.correct {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.quiz-option.wrong {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.quiz-progress {
+  margin-top: 2rem;
+  font-style: italic;
+  color: #aaa;
+}
